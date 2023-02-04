@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>update</title>
+    </head>
+    <body>
+        <form action="url_for('Update',id=data.regno)" method="POST">
+            <input name="regno" placeholder="enter regno" value="{{data.regno}}">
+            <input name="name" placeholder="enter name" value={{data.name}}>
+            <input name="email" placeholder="enter email" value={{data.email}}>
+            <input type="submit">
+        </form>
+    </body>
+</html>

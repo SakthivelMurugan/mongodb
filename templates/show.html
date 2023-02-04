@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>show</title>
+    </head>
+    <body>
+        <h1>students details</h1>
+        <a href="/insert"><button>insert</button></a>
+        <table border="2">
+            <tr>
+                <th>regno</th>
+                <th>name</th>
+                <th>email</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            {%for i in data%}
+            <tr>
+                <td>{{i.regno}}</td>
+                <td>{{i["name"]}}</td>
+                <td>{{i["email"]}}</td>
+                <td><a href="{{url_for('Update',id=i.regno)}}"><button>update</button></a></td>
+                <td><a href="/delete/{{i['regno']}}"><button>delete</button></a></td>
+            </tr>
+            {%endfor%}
+        </table>
+    </body>
+</html>
